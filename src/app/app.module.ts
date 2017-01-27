@@ -8,12 +8,14 @@ import {JsonServiceService} from "./json-service.service";
 import { JeuxComponent } from './jeux/jeux.component';
 import { HeaderComponent } from './header/header.component';
 import { AlertModule } from 'ng2-bootstrap';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     JeuxComponent,
-    HeaderComponent
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
