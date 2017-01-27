@@ -6,16 +6,20 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import {JsonServiceService} from "./json-service.service";
 import { JeuxComponent } from './jeux/jeux.component';
+import { HeaderComponent } from './header/header.component';
+import { AlertModule } from 'ng2-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JeuxComponent
+    JeuxComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AlertModule.forRoot(),
   ],
   providers: [JsonServiceService],
   bootstrap: [AppComponent]

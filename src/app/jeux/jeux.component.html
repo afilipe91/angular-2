@@ -1,4 +1,5 @@
 <h3>Liste jeux</h3>
-<li *ngFor="let game of games">
-  {{game.name}}
-</li>
+<ul *ngFor="let game of games">
+  <li>{{game.name}}</li>
+  <li>{{game.summary}}</li>
+</ul>
