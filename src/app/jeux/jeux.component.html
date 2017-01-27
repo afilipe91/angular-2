@@ -2,4 +2,8 @@
 <ul *ngFor="let game of games">
   <li>{{game.name}}</li>
   <li>{{game.summary}}</li>
+
+  <div *ngFor="let screen of game.screenshots">
+    <img src="{{screen.url}}">
+  </div>
 </ul>
