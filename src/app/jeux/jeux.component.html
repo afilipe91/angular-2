@@ -3,7 +3,7 @@
   <li>{{game.name}}</li>
   <li>{{game.summary}}</li>
 
-  <div *ngFor="let screen of game.screenshots">
-    <img src="{{screen.url}}">
+  <div *ngFor="let url of game.getScreenshots()">
+    <img src="{{url}}">
   </div>
 </ul>

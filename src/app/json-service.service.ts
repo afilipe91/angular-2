@@ -1,12 +1,27 @@
 import { Injectable } from '@angular/core';
+import { Jeu } from './jeu';
 
 @Injectable()
 export class JsonServiceService {
 
-  constructor() {}
+  // getGames(){
+  //   return games;
+  // }
+  jeux =[];
+  constructor() {
 
-  getGames(){
-    return games;
+    games.forEach(game => this.jeux.push(new Jeu(game)));
+  }
+
+  getGames()
+  {
+    return this.jeux;
+  }
+
+  getJeuByID() {
+
+    return this.jeux[0];
+
   }
 
 }
