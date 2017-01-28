@@ -1,9 +1,12 @@
-<h3>Liste jeux</h3>
-<ul *ngFor="let game of games">
-  <li>{{game.name}}</li>
-  <li>{{game.summary}}</li>
-
-  <div *ngFor="let url of game.getScreenshots()">
-    <img src="{{url}}">
-  </div>
-</ul>
+<div class="row">
+  <div *ngFor="let game of games" class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <img class="img-responsive" src="{{cover}}" alt="">
+      <div class="caption">
+        <h3>{{game.name}}</h3>
+        <p>{{game.summary | slice:0:100}}</p>
+        <p><a [routerLink]="'jeux/:id'"class="btn btn-primary" role="button">More</a></p>
+      </div>
+    </div>
+</div>
+</div>
