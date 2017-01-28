@@ -4,9 +4,6 @@ import { Jeu } from './jeu';
 @Injectable()
 export class JsonServiceService {
 
-  // getGames(){
-  //   return games;
-  // }
   jeux =[];
   constructor() {
 
