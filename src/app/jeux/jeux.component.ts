@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JsonServiceService } from '../json-service.service';
+import {Jeu} from "../jeu";
 
 
 @Component({
