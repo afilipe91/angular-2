@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {JeuxComponent} from "../jeux/jeux.component";
+import {JsonServiceService} from "../json-service.service";
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-jeu-unique',
@@ -8,9 +9,20 @@ import {JeuxComponent} from "../jeux/jeux.component";
 })
 export class JeuUniqueComponent implements OnInit {
 
-  constructor(private JeuxComponent:JeuxComponent) { }
-
-  ngOnInit() {
+  games;
+  nom: string;
+  constructor(private JsonService:JsonServiceService, private route:ActivatedRoute) {
+    this.nom = route.snapshot.params['nom'];
   }
 
+  ngOnInit() {
+    this.games = this.JsonService.getGames();
+  }
+  getActive(){
+    for (var i = 0; i < this.games.length; i++) {
+       if (this.games.name == this.nom){
+         this.games=[this.games[i]]
+       }
+    }
+  }
 }

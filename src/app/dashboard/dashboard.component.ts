@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {JsonServiceService} from "../json-service.service";
 
 @Component({
   selector: 'app-dashboard',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor() { }
+  games;
+  constructor(private JsonService:JsonServiceService) { }
 
   ngOnInit() {
+    this.games = this.JsonService.getGames();
   }
 
 }
