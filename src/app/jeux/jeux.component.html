@@ -1,7 +1,7 @@
 <div class="row">
   <div *ngFor="let game of games" class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img class="img-responsive" src="{{cover}}" alt="">
+      <img src="{{game.cover}}" alt="">
       <div class="caption">
         <h3>{{game.name}}</h3>
         <p>{{game.summary | slice:0:100}}</p>

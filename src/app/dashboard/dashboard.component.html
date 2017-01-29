@@ -1,3 +1,15 @@
-<img class="img-responsive center-block" height="40%" width="40%" src="http://fr.ubergizmo.com/wp-content/uploads/2013/02/Logo-de-Steam.png" alt="">
+<img class="img-responsive center-block" height="20%" width="20%" src="http://fr.ubergizmo.com/wp-content/uploads/2013/02/Logo-de-Steam.png" alt="">
 
 <h1 class="text-center">BIENVENUE SUR NOTRE SUPER PLATEFORME STEAM</h1>
+<h3 class="text-center">Top 3 des jeux</h3>
+<div class="row">
+    <div *ngFor="let game of games" class="col-sm-6 col-md-4">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>{{game.name}}</h3>
+                <p>{{game.summary | slice:0:100}}</p>
+                <p><a [routerLink]="'jeux/:id'"class="btn btn-primary" role="button">More</a></p>
+            </div>
+        </div>
+    </div>
+</div>

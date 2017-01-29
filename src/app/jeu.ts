@@ -7,7 +7,7 @@ export class Jeu {
     constructor(data)
     {
         Object.assign(this, data);
-
+        this.cover = this.cover.url;
     }
 
     getScreenshots()
@@ -18,5 +18,6 @@ export class Jeu {
             return [];
         }
     }
+
 
 }

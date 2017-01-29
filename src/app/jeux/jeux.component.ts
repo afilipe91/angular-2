@@ -16,5 +16,4 @@ export class JeuxComponent implements OnInit {
   ngOnInit() {
     this.games = this.JsonService.getGames();
   }
-
 }
