@@ -1,4 +1,5 @@
 export class Jeu {
+    id;
     name;
     summary;
     genres;
@@ -9,7 +10,6 @@ export class Jeu {
         Object.assign(this, data);
         this.cover = this.cover.url;
     }
-
     getScreenshots()
     {
         if(this.screenshots != null) {
